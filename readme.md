@@ -10,4 +10,8 @@
 
 **3. grocery_scanner_v6.3.py** - this is the primary subprocess script. It carries the code to read in the data from the receipt via EasyOCR, cluster together the price and item data via horizontal and vertical pixel cluster groups. This subprocess also sends the OCR results into ChatGPT 3.5 model 1106 to clean any data that does not belong in a grocey item database. 
 
-**4. chat_gpt_token_cost_script.pyt** - this script with calculate the associated cost of the ChatGPT API call in US dollars.
+**4. chat_gpt_token_cost_script.py** - this script with calculate the associated cost of the ChatGPT API call in US dollars.
+
+**5. database_result.jpg** - this screenshot shows a Postgres table in DBeaver with the extract values from the receipts. This values will be archived and for example, could be analyzed to calculate inflation in item prices quarter over quarter. 
+
+
