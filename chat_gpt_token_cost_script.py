@@ -3,6 +3,8 @@ from transformers import GPT2Tokenizer
 
 
 def calculate_chat_gpt_cost(input_text, output_text):
+    """this function will take the prompt and response strings provided and run them through a GPT cost tokenizer
+    library returning the total cost of the GPT API pull"""
     print(input_text)
     print(output_text)
     tokenizer = GPT2Tokenizer.from_pretrained("gpt2")
@@ -27,4 +29,4 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     total_cost = calculate_chat_gpt_cost(args.prompt, args.response)
-    print(f"gpt_run_cost: {total_cost}")
+    print(f"gpt_run_cost: {total_cost:.8f}")
